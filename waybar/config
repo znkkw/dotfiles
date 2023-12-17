@@ -2,7 +2,7 @@
   "layer": "top",
     "modules-left": ["custom/arch", "hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["backlight", "pulseaudio", "network", "battery"],
+    "modules-right": ["backlight", "pipewire","tray", "network", "battery"],
     "custom/arch": {
       "format": "  ",
       "tooltip": false,
@@ -26,7 +26,7 @@
       "format": "<span color='#b4befe'>{icon}</span> {percent}%",
       "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
-    "pulseaudio": {
+    "pipewire": {
       "format": "<span color='#b4befe'>{icon}</span> {volume}%",
       "format-muted": "",
       "tooltip": false,
@@ -37,8 +37,8 @@
       "scroll-step": 1,
     },
   "tray": {
-	"icon-size": 21,
-	"spacing": 10,
+	"icon-size": 16,
+  "spacing": 10,
   },
   "network": {
       "interface": "wlan0",
