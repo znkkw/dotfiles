@@ -1,0 +1,195 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 20, // Waybar height (to be removed for auto height)
+    "spacing": 4, // Gaps between modules (4px)
+    "fixed-center": true,
+    
+    // Choose the order of the modules
+    "modules-left": ["custom/menu", "hyprland/workspaces", "hyprland/window"],
+    // "modules-center": [],
+    "modules-right": ["custom/updates", "network", "pulseaudio", "backlight", "battery","cpu", "memory", "clock", "tray", "custom/power"],
+    
+    // Modules configuration
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+		"on-scroll-down": "hyprctl dispatch workspace e-1",
+        "on-click": "activate",
+        "format": "{name}:{icon}",
+        "format-icons": {
+             "1": "",
+             "2": "",
+             "3": "",
+             "4": "",
+             "5": "",
+             "6": "",
+             "7": "",
+             "urgent": "",
+             "focused": "",
+             "default": ""
+         }
+     },
+    
+    "disk": {
+		"interval": 30,
+		"format": "{percentage_used}% <span color=\"#C778DD\"></span>",
+		"path": "/"
+	},
+	
+   "mpd": {
+        "format": "{title} - {artist} ",
+        "format-disconnected": "Disconnected",
+        "format-stopped": "Stopped",
+        "max-length": 50,
+        "on-click": "~/.config/rofi/bin/music",
+        "on-click-right": "alacritty -e ncmpcpp"
+    },
+    
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    
+    "clock": {
+        // "timezone": "Europe/Berlin",
+        "format": "<span color=\"#FFFFFF\"></span> {:%H:%M  %d/%m/%Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
+        "on-click": "exec wezterm start -e calcure"
+        //"format-alt": "{:%d/%m/%Y} <span color=\"#FFFFFF\"></span>"
+    },
+           
+    "cpu": {
+        "format": "{usage}% <span color=\"#EFCA84\"></span>",
+        "tooltip": false
+    },
+    
+    "memory": {
+        "format": "{}% <span color=\"#62AEEF\"></span>"
+    },
+    
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "<span color=\"#FFFFFF\">{icon}</span>  {capacity}%",
+        "format-charging": "<span color=\"#FF0000\"></span> {capacity}%",
+        "format-plugged": "<span color=\"#FF0000\"></span> {capacity}%",
+        "format-alt": "<span color=\"#FF0000\">{icon}</span> {time}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    
+    "network": {       
+        "format-wifi": "<span color=\"#FFFFFF\">說</span> {essid} ({signalStrength}%)",
+        "format-ethernet": "{ipaddr}/{cidr} <span color=\"#FFFFFF\"></span>",
+        "tooltip-format": "{ifname} via {gwaddr} <span color=\"#FFFFFF\"></span>",
+        "format-linked": "{ifname} (No IP) <span color=\"#FFFFFF\"></span>",
+        "format-disconnected": "Disconnected 轢",
+        //"format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "on-click": "~/.config/rofi/bin/network_menu",
+        "on-click-right": "nm-connection-editor"
+    },
+    
+
+    "custom/cycle_wall":{
+    "format":" ",
+    "on-click": "~/.config/hypr/bin/changeWallpaper",
+    "tooltip-format": "Change wallpaper",
+	},
+    
+    "custom/menu": {
+    "format": " <span color=\"#FFFFFF\"></span> ",
+    "tooltip": false,
+    "on-click": "pkill rofi || ~/.config/rofi/bin/launcher",
+	},
+    
+    "custom/power": {
+    "format": " <span color=\"#FFFFFF\">⏻</span> ",
+    "tooltip": false,
+    "on-click": "pkill rofi || ~/.config/rofi/bin/powermenu",
+	},
+
+   "custom/filemanager": {
+        "format": "  ",
+        "interval": "once",
+        "on-click": "exec 'Thunar'",
+    },
+
+  "custom/libre": {
+        "format": "  ",
+        "interval": "once",
+        "on-click": "exec libreoffice",
+  },
+
+    "custom/browser": {
+        "format": "  ",
+        "interval": "once",
+        "on-click": "exec 'firefox'",
+    },
+
+	"custom/scratchpad_indicator": {
+        "format": "  ",
+        "on-click": "exec scratchpad -g",
+        "tooltip": true,
+        "show-empty": false,
+    },
+  
+    "custom/updates": {
+        "format": "{}",
+        "exec": "~/.config/hypr/waybar/scripts/update-sys",
+        "on-click": "~/.config/hypr/waybar/scripts/update-sys update",
+        "interval": 30,
+        "tooltip": true
+    },
+
+    "wlr/taskbar": {
+        "format": "{name}",
+        "icon-size": 17,
+        "all-outputs": true,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": [
+            "rofi"
+         ]
+    },
+    
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": "<span color=\"#FF0000\"></span>"
+        },
+        "tooltip": "true"
+    },
+    
+    "hyprland/language": {
+    "format": "{}",
+    "format-bn": "bn",
+    "format-us": "us",
+    "format-en": "us",
+    },
+
+    "custom/ibus_layout": {
+    "exec": "sleep 0.1s && cat ~/.cache/ibus-layout",
+    "interval": 3,
+    "tooltip": false,
+    },
+    
+    "hyprland/window": {
+		"format": " {}",
+		"max-length": 150,
+		"separate-outputs": true
+     },
+}
