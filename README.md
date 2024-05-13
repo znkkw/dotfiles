@@ -9,5 +9,4 @@ These are my dotfiles!
 simply clone this repository with:
 ```
 git clone https://github.com/znkkw/dotfiles
-
 ```
