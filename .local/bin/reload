@@ -1,0 +1,3 @@
+#!/bin/zsh
+thinkpad-dock on
+feh --bg-fill /home/cs/dox/pi.png
