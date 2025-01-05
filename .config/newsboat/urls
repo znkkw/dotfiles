@@ -1,15 +1,42 @@
+" --- TECH ---"
 https://artixlinux.org/feed.php "tech"
 https://www.archlinux.org/feeds/news/ "tech"
 https://hackaday.com/blog/feed/ "tech"
 http://news.ycombinator.com/rss "tech"
-https://denshi.org/index.xml "entertainment"
 https://security.gentoo.org/glsa/feed.rss "gentoo-security"
-https://www.gentoo.org/feeds/news.xml "gentoo"
-https://c3866s.github.io/atom.xml "entertainment"
+https://www.gentoo.org/feeds/news.xml "gentoo
+https://bugs.gentoo.org/buglist.cgi?chfield=%5BBug%20creation%5D&chfieldfrom=24h&query_format=advanced&title=Bug%20List&ctype=atom
+https://znkkw.github.io/atom.xml "entertainment"
+https://www.eff.org/rss/updates.xml
 https://www.systemli.org//en/index.xml "tech"
-https://gnulinux.ch/rss.xml "GNU/Linux"
-https://rss.golem.de/rss.php?ms=security&feed=RSS1.0 "tech"
-https://rss.golem.de/rss.php?ms=internet&feed=RSS1.0 "tech"
-https://rss.golem.de/rss.php?ms=open-source&feed=RSS1.0 "tech"
-https://rss.golem.de/rss.php?ms=wissenschaft&feed=RSS1.0 "tech"
+https://blog.mozilla.org/feed/
+https://hacks.mozilla.org/feed/
+https://www.fsinf.at/rss.xml
+https://notrelated.xyz/rss
+https://nitter.privacydev.net/Openwall/rss
+
+" --- CVE --- "
+https://seclists.org/rss/fulldisclosure.rss
+https://seclists.org/rss/nanog.rss "sec"
+https://seclists.org/rss/oss-sec.rss "sec"
+
+
+" --- VID ---"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCdwo4k1RQHTcq_-WS7Cazqg
+https://www.youtube.com/feeds/videos.xml?channel_id=UCSl5Uxu2LyaoAoMMGp6oTJA
+https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA
+https://www.youtube.com/feeds/videos.xml?channel_id=UCtMVHI3AJD4Qk4hcbZnI9ZQ
+https://www.youtube.com/feeds/videos.xml?channel_id=UCxdZ7XCQVMRMipj3gGemQfw
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsnGwSIHyoYN0kiINAGUKxg
+https://www.youtube.com/feeds/videos.xml?channel_id=UCNwGa76xVVwdEVToRZBIUIg
+https://www.youtube.com/feeds/videos.xml?channel_id=UCqnKDzxO2M_-B-MJYx5qz1Q
+https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw
+https://www.youtube.com/feeds/videos.xml?channel_id=UCFhXFikryT4aFcLkLw2LBLA
+https://www.youtube.com/feeds/videos.xml?channel_id=UCKGMHVipEvuZudhHD05FOYA
+https://www.youtube.com/feeds/videos.xml?channel_id=UChuDUAo3Hfr_0dn54GpwdUQ
+https://www.youtube.com/feeds/videos.xml?channel_id=UClY084mbGLK_SLlOfgizjow
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA
+https://www.youtube.com/feeds/videos.xml?channel_id=UCR-DXc1voovS8nhAvccRZhg
+
+
 
