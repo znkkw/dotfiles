@@ -5,7 +5,7 @@ These are my dotfiles!
 - Hyperland + waybar config
 - scripts used for Hyperland and my [dwm setup](https://github.com/znkkw/dwm)
 
-# How to use? 
+# How can I use it? 
 simply clone this repository with:
 ```
 git clone https://github.com/znkkw/dotfiles
