@@ -1,10 +1,3 @@
---[[
-
-Neovim init file
-Maintainer: brainf+ck
-Website: https://github.com/brainfucksec/neovim-lua
-
---]]
 
 -- Import Lua modules
 require('core/lazy')
