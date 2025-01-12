@@ -1,0 +1,116 @@
+# languages.toml for Helix
+# Configuration for selected languages
+
+[[language]]
+name = "c"
+scope = "source.c"
+file-types = ["c", "h"]
+roots = [".git/"]
+language-servers = ["clangd"]
+
+[[language]]
+name = "cpp"
+scope = "source.cpp"
+file-types = ["cpp", "hpp", "cc", "cxx", "hxx"]
+roots = [".git/"]
+language-servers = ["clangd"]
+
+[[language]]
+name = "rust"
+scope = "source.rust"
+file-types = ["rs"]
+roots = ["Cargo.toml", ".git/"]
+language-servers = ["rust-analyzer"]
+
+[[language]]
+name = "markdown"
+scope = "source.gfm"
+file-types = ["md", "markdown"]
+roots = [".git/"]
+language-servers = ["marksman"]
+
+[[language]]
+name = "asm"
+scope = "source.asm"
+file-types = ["asm", "s", "S"]
+roots = [".git/"]
+language-servers = ["asm-lsp"]
+
+[[language]]
+name = "python"
+scope = "source.python"
+file-types = ["py"]
+roots = ["pyproject.toml", ".git/"]
+language-servers = ["pylsp"]
+
+[[language]]
+name = "java"
+scope = "source.java"
+file-types = ["java"]
+roots = [".git/", "pom.xml", "build.gradle"]
+language-servers = ["jdtls"]
+
+[[language]]
+name = "r"
+scope = "source.r"
+file-types = ["r", "R"]
+roots = [".git/"]
+language-servers = ["r-languageserver"]
+
+[[language]]
+name = "haskell"
+scope = "source.haskell"
+file-types = ["hs"]
+roots = ["stack.yaml", "cabal.project", ".git/"]
+language-servers = ["hls"]
+
+[[language]]
+name = "perl"
+scope = "source.perl"
+file-types = ["pl", "pm"]
+roots = [".git/"]
+language-servers = ["perl-languageserver"]
+
+[[language]]
+name = "julia"
+scope = "source.julia"
+file-types = ["jl"]
+roots = [".git/"]
+language-servers = ["julials"]
+
+# Language server configurations
+
+[language-server]
+[language-server.clangd]
+command = "clangd"
+
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+
+[language-server.marksman]
+command = "marksman"
+
+[language-server.asm-lsp]
+command = "asm-lsp"
+
+[language-server.pylsp]
+command = "pylsp"
+
+[language-server.jdtls]
+command = "jdtls"
+
+[language-server.r-languageserver]
+command = "R"
+args = ["--slave", "-e", "languageserver::run()"]
+
+[language-server.hls]
+command = "haskell-language-server-wrapper"
+
+[language-server.perl-languageserver]
+command = "perl"
+args = ["-MPerl::LanguageServer", "-e", "Perl::LanguageServer::run"]
+
+[language-server.julials]
+command = "julia"
+args = ["--startup-file=no", "--history-file=no", "-e", "using LanguageServer; runserver()"]
+
